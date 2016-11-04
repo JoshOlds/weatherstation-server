@@ -1,0 +1,11 @@
+{
+  "name": "weatherstation-server",
+  "version": "1.0.0",
+  "description": "A server with RESTful API for Weatherstaion Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Olds",
+  "license": "ISC"
+}
