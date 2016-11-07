@@ -18,7 +18,7 @@ function create(weather, cb) {
     let tempF = weather.reading.tempF.toFixed(2);
     let tempC = weather.reading.tempC.toFixed(2);
     let rh = weather.reading.rh.toFixed(2);
-    let reading = {timeStamp: dateStamp, tempF: tempF, tempC: tempC, rh: rh}
+    let reading = {timeStamp: dateStamp, tempF: tempF, tempC: tempC, rh: rh, location:{lat: weather.reading.location.lat, lon: weather.reading.location.lon}}
 
     getById(dateId, "",  data => {
       if(data.message){ //First post of day
