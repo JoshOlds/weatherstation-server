@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiseWeather</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation-flex.min.css" />
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>Weather station coming soon!</h1>
+
+    <div class="row header full-width">
+        <div class="column small-12">
+            <h1 class="text-center">Boise Weather</h1>
+            <h5 class="text-center">By: Joshua Olds</h5>
+        </div>
+    </div>
+
+    <div class="row chart-row">
+        <div class="column small-12 chart-col">
+            <canvas id="weather-chart" class="weather-chart"></canvas>
+        </div>
+    </div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+    <script src="./services/weather-service.js"></script>
+    <script src="./controllers/chart-controller.js"></script>
+
+    <script src="./app.js"></script>
 </body>
+
 </html>
