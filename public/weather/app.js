@@ -1,6 +1,31 @@
 console.log("app.js initialized")
 var chartController = new ChartController();
+var celciusFlag = false;
+var humidityFlag = true;
+var dayFormat = 1;
 
-chartController.getWeather()
-    .then(chartController.drawTodayWeather)
-    //.catch(function(err){console.error(err)})
+updateWeather();
+
+function updateWeather(){
+   chartController.drawWeather(celciusFlag, humidityFlag, dayFormat)
+}
+
+$('#temp-format-c').change(() =>{
+    celciusFlag = true;
+    updateWeather();
+});
+
+$('#temp-format-f').change(() =>{
+    celciusFlag = false;
+    updateWeather();
+});
+
+$('#humidity-check').change(() =>{
+    humidityFlag = !humidityFlag;
+    updateWeather();
+});
+
+$('#weather-range').change( () =>{
+    dayFormat = $('#weather-range').val();
+    updateWeather();
+});

@@ -18,8 +18,43 @@
         </div>
     </div>
 
-    <div class="row chart-row">
-        <div class="column small-12 chart-col">
+    <div class="row chart-row full-width">
+        <div class="column small-2 nav-side">
+            <hr>
+            <div>
+                <label><h3>Date Range</h3>
+                <select id="weather-range">
+                    <option value="1">Today's Weather</option>
+                    <option value="3">Last 3 Days</option>
+                    <option value="5">Last 5 Days</option>
+                    <option value="10">Last 10 Days</option>
+                </select>
+            </label>
+            </div>
+
+            <div>
+                <fieldset>
+                    <legend>Temperature Format</legend>
+                    <input type="radio" name="temp-format" value="C" id="temp-format-c" required><label>*Celcius</label>
+                    <input type="radio" name="temp-format" value="F" id="temp-format-f" checked="checked"><label>*Fahrenheit</label>
+                    <input type="checkbox" name="humidity-check" value="H" id="humidity-check" checked="checked"><label>%RH</label>
+                </fieldset>
+            </div>
+
+            <div>
+                <label><h5>Resolution</h5>
+                <select id="weather-resolution">
+                    <option value="15">15-Minute</option>
+                    <option value="30">30-Minute</option>
+                    <option value="45">45-Minute</option>
+                    <option value="60">1 Hour</option>
+                    <option value="120">2 Hour</option>
+                </select>
+            </label>
+            </div>
+
+        </div>
+        <div class="column small-8 chart-col" id="chart-col">
             <canvas id="weather-chart" class="weather-chart"></canvas>
         </div>
     </div>
