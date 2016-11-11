@@ -19,8 +19,8 @@
     background-size: cover;
     border-bottom: 2px solid black;
     box-shadow: 0px 0px 7px black;
-    height: 233px; /*Exact height of image*/
-    color: darkred
+    height: 22%; /*Exact height of image*/
+    background-size: cover;
 }
 
 .stats{
@@ -37,7 +37,7 @@
 }
 
 .logo{
-    width: 80px;
+    width: 30%;
 }
 
 

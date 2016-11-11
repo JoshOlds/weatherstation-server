@@ -1,6 +1,8 @@
 # Boise Weather Server
+[Boise Weather](https://boiseweather.herokuapp.com/)
 
-Boise Weather Server is the Node.js backend half of the 'Boise Weather' project. This server is hosted on Heroku.com
+Boise Weather Server is the Node.js server backend half of the 'Boise Weather' project. This server is hosted on Heroku.com. 
+To view the Beaglebone Hardware half of this project, see: [Beaglebone Hardware](https://github.com/JoshOlds/weatherstation)
 
 
 
