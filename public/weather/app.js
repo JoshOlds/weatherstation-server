@@ -1,7 +1,7 @@
 console.log("app.js initialized")
 var chartController = new ChartController();
 var celciusFlag = false;
-var humidityFlag = true;
+var humidityFlag = false;
 var dayFormat = 1;
 
 updateWeather();

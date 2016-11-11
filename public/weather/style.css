@@ -5,6 +5,11 @@
    max-width: initial;
 }
 
+.slow-spin {
+  -webkit-animation: fa-spin 3s infinite linear;
+  animation: fa-spin 3s infinite linear;
+}
+
 .text-center{
     text-align: center;
 }
@@ -15,7 +20,27 @@
     border-bottom: 2px solid black;
     box-shadow: 0px 0px 7px black;
     height: 233px; /*Exact height of image*/
+    color: darkred
 }
+
+.stats{
+    text-align: left;
+}
+.high{
+    color: red;
+}
+.low{
+    color: blue;
+}
+.average{
+    color: black;
+}
+
+.logo{
+    width: 80px;
+}
+
+
 
 .weather-chart{
     height: 50%;

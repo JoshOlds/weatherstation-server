@@ -3,19 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoiseWeather</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation-flex.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
     <div class="row header full-width">
-        <div class="column small-12">
-            <h1 class="text-center">Boise Weather</h1>
-            <h5 class="text-center">By: Joshua Olds</h5>
-        </div>
+
     </div>
 
     <div class="row chart-row full-width">
@@ -37,26 +34,64 @@
                     <legend>Temperature Format</legend>
                     <input type="radio" name="temp-format" value="C" id="temp-format-c" required><label>*Celcius</label>
                     <input type="radio" name="temp-format" value="F" id="temp-format-f" checked="checked"><label>*Fahrenheit</label>
-                    <input type="checkbox" name="humidity-check" value="H" id="humidity-check" checked="checked"><label>%RH</label>
+                    <input type="checkbox" name="humidity-check" value="H" id="humidity-check"><label>%RH</label>
                 </fieldset>
+
+                <hr>
+
+                <div>
+                    <h3>Statistics</h3>
+                    <h5 class="stats high" id="high">High: </h5>
+                    <h5 class="stats low" id="low">Low:</h5>
+                    <h5 class="stats average" id="average">Avg:</h5>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p class="condition-string" id="condition-string"></p>
+                </div>
+
+                <hr>
+
+                <div>
+                    <p>Interested in building your own? See how it was done on my <a href="./build.html">build page</a></p>
+                    <p>Or, check out the code for the <a href="https://github.com/JoshOlds/weatherstation-server"><strong>Server</strong></a> and the <a href="https://github.com/JoshOlds/weatherstation"><strong>Beaglebone Hardware</strong></a></p>
+                </div>
+
             </div>
 
+        </div>
+        <div class="column small-8 chart-col text-center align-self-middle" id="chart-col">
+           <h1><i class="fa fa-cog slow-spin fa-4x" aria-hidden="true"></i></h1>
+        </div>
+
+        <div class="column small-2">
+            <h1 class="text-center head-text">Boise Weather</h1>
+            <h5 class="text-center head-text">By: <a href="https://www.linkedin.com/in/joshua-olds-91499b122">Joshua Olds</a></h5>
+            <h3 class="text-center">
+                <a href="https://github.com/JoshOlds"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/joshua-olds-91499b122"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </h3>
+            <hr>
+            <p>*Note: The sensor that is taking the readings shown here is located on a North facing wall, and is in the shade
+                at all times of the day. Readings here will be representative of the air temperature in the shade. If you
+                are in the sun, you should feel warmer than this!</p>
             <div>
-                <label><h5>Resolution</h5>
-                <select id="weather-resolution">
-                    <option value="15">15-Minute</option>
-                    <option value="30">30-Minute</option>
-                    <option value="45">45-Minute</option>
-                    <option value="60">1 Hour</option>
-                    <option value="120">2 Hour</option>
-                </select>
-            </label>
+                <p><strong>This custom weatherstation is running on:<strong></p>
+                <ul>
+                    <li><a href="http://beagleboard.org/bone">TI Beaglebone</a></li>
+                    <li><a href="https://resin.io/">Resin.io</a></li>
+                    <li><a href="https://nodejs.org/en/download/">Node.js</a></li>
+                </ul>
+                <img src="./resources/beagle.jpg" class="logo" alt="Beaglebone Logo">
+                <img src="./resources/resin.png" class="logo" alt="Resin.io Logo">
+                <img src="./resources/nodejs-logo.png" class="logo" alt="Node.js Logo">
             </div>
+        </div>
 
-        </div>
-        <div class="column small-8 chart-col" id="chart-col">
-            <canvas id="weather-chart" class="weather-chart"></canvas>
-        </div>
+
+
     </div>
 
 
