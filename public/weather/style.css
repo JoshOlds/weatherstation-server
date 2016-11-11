@@ -10,6 +10,16 @@
   animation: fa-spin 3s infinite linear;
 }
 
+.slow-spin-very {
+  -webkit-animation: fa-spin 10s infinite linear;
+  animation: fa-spin 10s infinite linear;
+}
+
+.slow-spin-mouseover:hover{
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
+
 .text-center{
     text-align: center;
 }

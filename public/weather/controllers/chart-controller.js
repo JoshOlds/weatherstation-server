@@ -92,9 +92,9 @@ function ChartController() {
         })
         average = average / dataSet.length;
 
-        highElem.html(`High: ${high} <i class="fa fa-sun-o" aria-hidden="true"></i>`)
-        lowElem.html(`Low: ${low} <i class="fa fa-snowflake-o" aria-hidden="true"></i>`)
-        avgElem.html(`Avg: ${average.toFixed(2)} <i class="fa fa-smile-o" aria-hidden="true"></i>`)
+        highElem.html(`High: ${high} <i class="fa fa-sun-o slow-spin-very" aria-hidden="true"></i>`)
+        lowElem.html(`Low: ${low} <i class="fa fa-snowflake-o slow-spin-very" aria-hidden="true"></i>`)
+        avgElem.html(`Avg: ${average.toFixed(2)} <i class="fa fa-smile-o slow-spin-mouseover" aria-hidden="true"></i>`)
     }
 
     this.updateConditionString = function updateConditionString(){
