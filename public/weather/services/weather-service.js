@@ -93,6 +93,12 @@ function WeatherService(){
                 if(data.weather[0].main == 'Extreme'){
                     cs = "Wow! The weather is crazy out there! Be Safe!"
                 }
+                if(data.weather[0].main == 'Mist'){
+                    cs = `Its pretty misty out there right now. Take a coat! <i class="fa fa-cloud" style="color:blue" aria-hidden="true"></i>`
+                }
+                if(data.weather[0].main == 'Haze'){
+                    cs = `Its very hazy out. Visibility may be low. <i class="fa fa-cloud" style="color:orange" aria-hidden="true"></i>`
+                }
                 if(cs == ""){
                     cs = `The current condition outside is: <strong>${data.weather[0].main}</strong>`
                 }
