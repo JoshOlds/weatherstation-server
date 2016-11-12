@@ -21,6 +21,7 @@
     "firebase": "^2.4.2",
     "js-data": "^2.9.0",
     "js-data-firebase": "^2.1.1",
-    "node-uuid": "^1.4.7"
+    "node-uuid": "^1.4.7",
+    "request": "^2.78.0"
   }
 }

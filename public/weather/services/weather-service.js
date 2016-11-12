@@ -2,11 +2,9 @@ function WeatherService(){
 
     var baseURL = '//boiseweather.herokuapp.com/'
     var weatherURL = 'api/weather/'
-    var apiKey = '052c8f761a636457486b97ec6e54e76e';
     var conditionData;
     this.weatherData = [];
-    var lat = 43.60007449999999;
-    var lon = -116.23737749999998;
+
 
 
     this.getWeathers = function getWeathers(daysToGoBack, iteration, that){ //Im a recursive nightmare
@@ -59,7 +57,7 @@ function WeatherService(){
     this.getOpenWeatherMapStats = function getOpenWeatherMapStats(){
         return new Promise((resolve, reject) =>{
             if(conditionData){return resolve(conditionData)}
-            $.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}`)
+            $.get(`/api/open-weather`)
             .then(data =>{
                 resolve(data);
             })
