@@ -93,7 +93,7 @@ function WeatherService(){
                 if(data.weather[0].main == 'Extreme'){
                     cs = "Wow! The weather is crazy out there! Be Safe!"
                 }
-                if(cs = ""){
+                if(cs == ""){
                     cs = `The current condition outside is: <strong>${data.weather[0].main}</strong>`
                 }
                 return resolve(cs);
