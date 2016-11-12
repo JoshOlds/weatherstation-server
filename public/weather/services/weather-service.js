@@ -59,7 +59,7 @@ function WeatherService(){
     this.getOpenWeatherMapStats = function getOpenWeatherMapStats(){
         return new Promise((resolve, reject) =>{
             if(conditionData){return resolve(conditionData)}
-            $.get(`//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}`)
+            $.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}`)
             .then(data =>{
                 resolve(data);
             })
