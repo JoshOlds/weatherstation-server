@@ -81,9 +81,11 @@ function ChartController() {
 
 
     this.updateStats = function updateStats(dataSet) {
+        var nowElem = $('#now');
         var highElem = $('#high');
         var lowElem = $('#low');
         var avgElem = $('#average');
+        var now = dataSet[dataSet.length - 1]
         var high = dataSet[0];
         var low = dataSet[0];
         var average = 0;
@@ -95,6 +97,7 @@ function ChartController() {
         })
         average = average / dataSet.length;
 
+        nowElem.html(`Now: ${now} <i class="fa fa-heartbeat" aria-hidden="true"></i>`)
         highElem.html(`High: ${high} <i class="fa fa-sun-o slow-spin-very" aria-hidden="true"></i>`)
         lowElem.html(`Low: ${low} <i class="fa fa-snowflake-o slow-spin-very" aria-hidden="true"></i>`)
         avgElem.html(`Avg: ${average.toFixed(2)} <i class="fa fa-smile-o slow-spin-mouseover" aria-hidden="true"></i>`)

@@ -36,6 +36,9 @@
 .stats{
     text-align: left;
 }
+.now{
+    color: green;
+}
 .high{
     color: red;
 }
