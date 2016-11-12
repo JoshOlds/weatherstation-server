@@ -56,3 +56,15 @@
     height: 50%;
     width: 100%;
 }
+
+@media (max-width: 770px) {
+  .stats {
+    text-align: center;
+  }
+  .nav-side{
+      text-align: center;
+  }
+  .right-side{
+      text-align: center;
+  }
+}
